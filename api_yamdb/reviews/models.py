@@ -1,8 +1,8 @@
-from django.db import models
 from django.core.validators import MaxValueValidator, MinValueValidator
 from django.contrib.auth.models import AbstractUser
-from .validators import validate_year
+from django.db import models
 
+from .validators import validate_year
 
 Admin = 'admin'
 Moderator = 'moderator'
