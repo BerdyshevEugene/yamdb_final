@@ -42,7 +42,8 @@ jobs:
           uses: docker/build-push-action@v2
           with:
             push: true
-            tags: eugenenez/api_yamdb:latest
+            file: ./api_yamdb/Dockerfile
+            tags: eugenenez/web:latest
 
   deploy:
     runs-on: ubuntu-latest
