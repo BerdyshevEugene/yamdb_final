@@ -9,7 +9,7 @@ services:
       - ./.env
 
   web:
-    image: eugenenez/api_yamdb:latest
+    image: eugenenez/yamdb_final:latest
     restart: always
     volumes:
       - static_value:/app/static/
