@@ -1,4 +1,4 @@
-# Docker for API_YAMDB
+# Project: yamdb_final
 ____
 ## Description
 
