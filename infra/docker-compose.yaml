@@ -9,6 +9,7 @@ services:
       - ./.env
 
   web:
+    build: ../api_yamdb
     image: eugenenez/yamdb_final:v1
     restart: always
     volumes:
