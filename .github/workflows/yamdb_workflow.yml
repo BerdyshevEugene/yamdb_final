@@ -58,9 +58,9 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           passphrase: ${{ secrets.PASSPHRASE }}
           script: |
-            sudo docker pull eugenenez/yamdb_final:v1
             sudo docker-compose stop
             sudo docker-compose rm web
+            sudo docker pull eugenenez/yamdb_final:v1
             touch .env
             echo DB_ENGINE=${{ secrets.DB_ENGINE }} >> .env
             echo DB_NAME=${{ secrets.DB_NAME }} >> .env
@@ -69,8 +69,6 @@ jobs:
             echo DB_HOST=${{ secrets.DB_HOST }} >> .env
             echo DB_PORT=${{ secrets.DB_PORT }} >> .env
             sudo docker-compose up -d
-            sudo docker-compose exec -T web python manage.py collectstatic --noinput
-            sudo docker image prune -a -f
 
   send_message_telegram:
     runs-on: ubuntu-latest
