@@ -57,8 +57,13 @@ ContentType.objects.all().delete()
 quit()
 python manage.py loaddata dump.json
 ```
-you can go to the project by following the next link:
-http://51.250.1.29/
+you can go to the project by following the next links:
+
+http://178.154.206.197/admin/
+
+http://178.154.206.197/api/v1/auth/signup/
+
+http://178.154.206.197/api/v1/auth/token/
 ____
 
 ## Author
